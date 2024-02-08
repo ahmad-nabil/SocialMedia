@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment_menu.ClipBoard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAD188"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clipboard"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/TextMultiLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="168dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            app:layout_constraintEnd_toEndOf="@+id/btnCopy"
+            app:layout_constraintStart_toStartOf="@+id/btnCopy"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <com.spark.submitbutton.SubmitButton
+
+            android:id="@+id/btnCopy"
+            android:layout_width="49dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="64dp"
+            android:onClick="btnClicked"
+            android:text="Copy"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnremove"
+            app:sub_btn_background="@android:color/holo_red_light"
+            app:sub_btn_duration="2000"
+            app:sub_btn_line_color="@android:color/holo_green_dark"
+            app:sub_btn_ripple_color="@android:color/holo_green_light"
+            app:sub_btn_tick_color="@android:color/holo_red_light" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+            android:id="@+id/btnremove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnClicked"
+            android:src="@drawable/baseline_delete_24"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextMultiLine" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
